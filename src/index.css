@@ -1,0 +1,53 @@
+:root {
+  --text: #cee6fa;
+  --text-alt: #746c5e;
+  --bg: #04080d;
+  --header: #000001;
+  --button-bg: #151b22;
+  --accent: #0a4fb8;
+
+  --border-radius: 375rem;
+  --border-color: #746c5e;
+
+  --border-thin: 1px solid var(--border-color);
+
+  color: var(--text);
+
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+button {
+  outline: none;
+  font: inherit; 
+  cursor: pointer;
+
+}
+
+a, ul, li {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5rem;
+  font-family: sans-serif;
+}
