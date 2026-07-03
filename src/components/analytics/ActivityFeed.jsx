@@ -1,4 +1,4 @@
-import styles from "../../widgets/Analytics/style.module.css";
+import styles from "../../features/analytics/ui/ActivityFeed.module.css";
 
 const formatDate = (value) =>
     new Date(value).toLocaleDateString("en", {

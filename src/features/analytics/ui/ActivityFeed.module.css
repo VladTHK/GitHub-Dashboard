@@ -1,0 +1,87 @@
+.panel {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.kicker {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #7d8590;
+    margin-bottom: 6px;
+}
+
+.feedList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feedItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.feedAccent {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #21262d;
+    color: #58a6ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.feedBody strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.feedBody p {
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.feedDate {
+    color: #8b949e;
+    font-size: 0.84rem;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #c9d1d9;
+    padding: 8px 0;
+    border-bottom: 1px solid #21262d;
+}
+
+@media (max-width: 640px) {
+    .feedItem {
+        grid-template-columns: 1fr;
+    }
+
+    .feedDate {
+        justify-self: start;
+    }
+}

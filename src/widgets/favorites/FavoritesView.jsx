@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useFavorites } from "../../context/FavoritesContext";
-import styles from "../Analytics/style.module.css";
+import styles from "../../features/favorites/ui/FavoritesView.module.css";
 
 const FavoritesView = () => {
     const { favorites, removeFavorite } = useFavorites();

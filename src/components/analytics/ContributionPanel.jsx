@@ -1,4 +1,4 @@
-import styles from "../../widgets/Analytics/style.module.css";
+import styles from "../../features/analytics/ui/ContributionPanel.module.css";
 
 const formatNumber = (value) => {
     if (value >= 1000) {

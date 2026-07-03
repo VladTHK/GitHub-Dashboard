@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "../Analytics/style.module.css";
+import styles from "../../features/footer/ui/FooterPageView.module.css";
 
 const footerContent = {
     privacy: {

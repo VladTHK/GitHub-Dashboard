@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 import { useFavorites } from "../../context/FavoritesContext";
 import { getUser, searchUsers } from "../../api/githubService";
@@ -28,7 +28,8 @@ const HeaderNav = () => {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [loadingSearch, setLoadingSearch] = useState(false);
     const navigate = useNavigate();
-    const { setUser } = useUser();
+    const location = useLocation();
+    const { user, setUser } = useUser();
     const { favorites } = useFavorites();
 
     useEffect(() => {
@@ -84,6 +85,23 @@ const HeaderNav = () => {
         navigate(`/${normalizedValue}`);
     };
 
+    const handleAnalyticsClick = async () => {
+        const currentUsername = user?.login || location.pathname.replace(/^\//, "").split("/")[0];
+        const normalizedValue = normalizeGitHubInput(currentUsername);
+
+        if (!normalizedValue) {
+            return;
+        }
+
+        try {
+            const data = await getUser(normalizedValue);
+            setUser(data);
+            navigate(`/${normalizedValue}`);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
     return (
         <nav className={style.headerNav}>
             <div className={style.searchWrap}>
@@ -135,8 +153,8 @@ const HeaderNav = () => {
                     </button>
                 </li>
                 <li>
-                    <button className={style.headerButton} type="button">
-                        <img src={reportIcon} alt="Reports" />
+                    <button className={style.headerButton} type="button" onClick={handleAnalyticsClick}>
+                        <img src={reportIcon} alt="Analytics" />
                     </button>
                 </li>
             </ul>

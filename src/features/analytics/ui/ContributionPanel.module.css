@@ -1,0 +1,115 @@
+.panel {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.kicker {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #7d8590;
+    margin-bottom: 6px;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8b949e;
+    font-size: 0.82rem;
+}
+
+.legendCells {
+    display: flex;
+    gap: 3px;
+}
+
+.legendCell {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.calendarWrapper {
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+.calendarGrid {
+    display: flex;
+    gap: 4px;
+    min-width: 720px;
+}
+
+.calendarWeek {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.calendarCell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background: #161b22;
+    border: 1px solid rgba(240, 246, 252, 0.06);
+}
+
+.level0 { background: #161b22; }
+.level1 { background: #0e4429; }
+.level2 { background: #006d32; }
+.level3 { background: #26a641; }
+.level4 { background: #39d353; }
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.summaryBox {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.summaryValue {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.summaryLabel {
+    color: #8b949e;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 960px) {
+    .panelHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summaryGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+}

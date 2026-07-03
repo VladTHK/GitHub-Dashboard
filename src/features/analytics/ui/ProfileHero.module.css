@@ -1,0 +1,134 @@
+.heroCard {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.profileInfo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.avatar {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    border: 2px solid #30363d;
+}
+
+.kicker {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #7d8590;
+    margin-bottom: 6px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.login {
+    color: #7d8590;
+    margin-bottom: 8px;
+}
+
+.bio {
+    color: #c9d1d9;
+    max-width: 720px;
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    color: #8b949e;
+}
+
+.metaRow span {
+    border: 1px solid #30363d;
+    border-radius: 999px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+    gap: 12px;
+    min-width: 260px;
+}
+
+.statCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.statValue {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.statLabel {
+    color: #8b949e;
+    font-size: 0.85rem;
+}
+
+.heroActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 6px;
+}
+
+.secondaryButton {
+    background: #21262d;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    border-radius: 999px;
+    padding: 8px 12px;
+    transition: background 0.2s ease;
+}
+
+.secondaryButton:hover {
+    background: #30363d;
+}
+
+@media (max-width: 960px) {
+    .heroCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+}

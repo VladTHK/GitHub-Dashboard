@@ -1,0 +1,53 @@
+.panel {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.kicker {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #7d8590;
+    margin-bottom: 6px;
+}
+
+.secondaryButton {
+    background: #21262d;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    border-radius: 999px;
+    padding: 8px 12px;
+    transition: background 0.2s ease;
+}
+
+.secondaryButton:hover {
+    background: #30363d;
+}
+
+.feedList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bio {
+    color: #c9d1d9;
+}
+
+@media (max-width: 960px) {
+    .panelHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

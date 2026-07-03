@@ -1,0 +1,118 @@
+.panel {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.kicker {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #7d8590;
+    margin-bottom: 6px;
+}
+
+.panelBadge {
+    border: 1px solid #30363d;
+    border-radius: 999px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.repoList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.repoCard {
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.repoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.repoHeader a {
+    color: #58a6ff;
+    font-weight: 600;
+}
+
+.profileInfo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.avatarSmall {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #30363d;
+}
+
+.login {
+    color: #7d8590;
+    margin-bottom: 8px;
+}
+
+.bio {
+    color: #c9d1d9;
+}
+
+.repoMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    color: #8b949e;
+    font-size: 0.84rem;
+}
+
+.secondaryButton {
+    background: #21262d;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    border-radius: 999px;
+    padding: 8px 12px;
+    transition: background 0.2s ease;
+}
+
+.secondaryButton:hover {
+    background: #30363d;
+}
+
+.emptyState {
+    min-height: 60vh;
+    display: grid;
+    place-items: center;
+    border: 1px dashed #30363d;
+    border-radius: 16px;
+    color: #8b949e;
+    padding: 24px;
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .panelHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

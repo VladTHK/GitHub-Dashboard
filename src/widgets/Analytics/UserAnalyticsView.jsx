@@ -8,7 +8,7 @@ import ProfileHero from "../../components/analytics/ProfileHero";
 import ContributionPanel from "../../components/analytics/ContributionPanel";
 import RepositoriesOverview from "../../components/analytics/RepositoriesOverview";
 import ActivityFeed from "../../components/analytics/ActivityFeed";
-import styles from "../Analytics/style.module.css";
+import styles from "../../features/analytics/ui/AnalyticsPage.module.css";
 
 const getContributionLevel = (count) => {
     if (count >= 4) return "level4";
