@@ -1,6 +1,5 @@
 .heroCard {
-    background: #161b22;
-    border: 1px solid #30363d;
+    border: var(--border-thin);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     padding: 28px;
@@ -28,7 +27,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.16em;
-    color: #7d8590;
+    color: var(--text-alt);
     margin-bottom: 6px;
 }
 
@@ -45,7 +44,7 @@ h1 {
 }
 
 .login {
-    color: #7d8590;
+    color: var(--text-alt);
     margin-bottom: 8px;
 }
 
@@ -59,11 +58,11 @@ h1 {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
-    color: #8b949e;
+    color: var(--text-alt);
 }
 
 .metaRow span {
-    border: 1px solid #30363d;
+    border: var(--border-thin);
     border-radius: 999px;
     padding: 4px 8px;
     font-size: 0.8rem;
@@ -79,7 +78,7 @@ h1 {
 
 .statCard {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid #30363d;
+    border: var(--border-thin);
     border-radius: 12px;
     padding: 14px;
 }

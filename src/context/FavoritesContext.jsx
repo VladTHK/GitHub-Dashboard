@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 const FavoritesContext = createContext(null);
 const STORAGE_KEY = "ghdashboard.favorite-users";
@@ -39,7 +39,7 @@ export function FavoritesProvider({ children }) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
     }, [favorites]);
 
-    const addFavorite = (user) => {
+    const addFavorite = useCallback((user) => {
         const normalized = normalizeUser(user);
         setFavorites((current) => {
             if (current.some((favorite) => favorite.login === normalized.login)) {
@@ -47,20 +47,25 @@ export function FavoritesProvider({ children }) {
             }
             return [normalized, ...current];
         });
-    };
+    }, []);
 
-    const removeFavorite = (login) => {
+    const removeFavorite = useCallback((login) => {
         setFavorites((current) => current.filter((favorite) => favorite.login !== login));
-    };
+    }, []);
+
+    const isFavorite = useCallback(
+        (login) => favorites.some((favorite) => favorite.login === login),
+        [favorites]
+    );
 
     const value = useMemo(
         () => ({
             favorites,
             addFavorite,
             removeFavorite,
-            isFavorite: (login) => favorites.some((favorite) => favorite.login === login),
+            isFavorite,
         }),
-        [favorites]
+        [favorites, addFavorite, removeFavorite, isFavorite]
     );
 
     return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>;
